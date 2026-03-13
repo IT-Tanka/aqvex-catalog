@@ -1,9 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req, res) {
   const base =
     'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1';
 
