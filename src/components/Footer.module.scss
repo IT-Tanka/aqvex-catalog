@@ -28,9 +28,13 @@
     }
     span {
         font-family: "Klein", system-ui, sans-serif;
-        color:$text-secondary;
+        color: $text-secondary;
         line-height: 1.4;
         font-weight: 500;
         letter-spacing: 2%;
+    }
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap:20px;
     }
 }
