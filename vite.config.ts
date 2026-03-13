@@ -21,10 +21,10 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api/proxy': {
+      '/api': {
         target: 'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/proxy/, '/api/v1'),
+        rewrite: (path) => path.replace(/^\/api/, '/api/v1'),
         secure: false, // если SSL-ошибки — можно true/false поэкспериментировать
       },
     },
