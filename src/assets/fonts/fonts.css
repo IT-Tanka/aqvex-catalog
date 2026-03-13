@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Klein';
+  src: url('./Klein-Regular.woff2') format('woff2');
+  font-weight: 400;    /* Regular */
+  font-style: normal;
+  font-display: swap;  /* дуже важливо! */
+}
+
+@font-face {
+  font-family: 'Klein';
+  src: url('./Klein-Medium.woff2') format('woff2');
+  font-weight: 500;    /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Klein';
+  src: url('./Klein-Bold.woff2') format('woff2');
+  font-weight: 700;    /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
