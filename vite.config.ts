@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   css: {
@@ -18,6 +17,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',   // якщо ще немає — додай, щоб @ працював як src/
+    },
+  },
+  server: {
+    proxy: {
+      '/api/proxy': {
+        target: 'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/proxy/, '/api/v1'),
+        secure: false, // если SSL-ошибки — можно true/false поэкспериментировать
+      },
     },
   },
 })
