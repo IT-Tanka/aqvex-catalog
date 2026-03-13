@@ -1,25 +1,3 @@
-// import axios from 'axios';
-// import type { ProductsApiResponse, ProductsQueryParams, Product } from '../types';  // ← додай type тут!
-
-// const API_BASE_URL = 'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1';
-
-// export const fetchProducts = async (params: ProductsQueryParams = {}): Promise<Product[]> => {
-//   try {
-//     const response = await axios.get<ProductsApiResponse>('/products', {
-//       baseURL: API_BASE_URL,
-//       params,
-//     });
-
-//     if (!response.data.success) {
-//       throw new Error('API returned unsuccessful response');
-//     }
-
-//     return response.data.data.products;
-//   } catch (error) {
-//     console.error('Error fetching products:', error);
-//     throw error;
-//   }
-// };
 import axios from 'axios';
 import type { ProductsApiResponse, Product } from '../types';
 
@@ -31,7 +9,7 @@ export const fetchAllProducts = async (): Promise<Product[]> => {
   });
 
   if (!response.data.success) {
-    throw new Error('API повернув помилку');
+    throw new Error('API вернул ошибку');
   }
 
   return response.data.data.products;

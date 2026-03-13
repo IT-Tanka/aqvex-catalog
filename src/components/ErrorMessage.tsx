@@ -12,7 +12,7 @@ export default function ErrorMessage({ message = 'Щось пішло не та�
       <p>{message}</p>
       {onRetry && (
         <button onClick={onRetry} className={styles.retryBtn}>
-          Спробувати ще раз
+          Попробовать еще раз
         </button>
       )}
     </div>
